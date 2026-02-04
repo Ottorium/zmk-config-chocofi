@@ -14,7 +14,7 @@
  * LAYER 1: NUM
  * ┌─────────────────────────────┐ ┌─────────────────────────────┐
  * │  F1 │  F2 │  F3 │  F4 │  F5 │ │  F6 │  F7 │  F8 │  F9 │ F10 │
- * │  1  │  2  │  3  │  4  │  5  │ │  6  │  7  │  8  │  9  │  0  │
+ * │SFT/1│ALT/2│CTL/3│WIN/4│  5  │ │  6  │WIN/7│CTL/8│ALT/9│SFT/0│
  * │ F11 │ F12 │ F13 │ F14 │ F15 │ │ F16 │ F17 │ F18 │ F19 │ F20 │
  * └──────────┐      │     │     │ │     │     │     │┌──────────┘
  *            └──────────────────┘ └──────────────────┘
@@ -22,26 +22,26 @@
  * LAYER 2: SYM
  * ┌─────────────────────────────┐ ┌─────────────────────────────┐
  * │  !  │  @  │  #  │  $  │  %  │ │  ^  │  &  │  *  │  (  │  )  │
- * │  _  │  -  │  +  │  /  │  =  │ │  |  │  [  │  ]  │  {  │  }  │
- * │  §  │  `  │  ~  │  \  │  °  │ │  €  │  ß  │  ä  │  ö  │  ü  │
+ * │SFT/?│ALT/-│CTL/+│WIN//│  =  │ │  |  │WIN/[│CTL/]│ALT/{│SFT/}│
+ * │  `  │  _  │  ~  │  \  │  °  │ │  €  │  ß  │  ä  │  ö  │  ü  │
  * └──────────┐      │     │     │ │ SFT │     │     │┌──────────┘
  *            └──────────────────┘ └──────────────────┘
  *
  * LAYER 3: NAV
  * ┌─────────────────────────────┐ ┌─────────────────────────────┐
- * │     │     │     │     │     │ │ PSC │ HOME│ PGDN│ PGUP│ END │
- * │ MB5 │ LCLK│ MCLK│ RCLK│     │ │ INS │ LEFT│ DOWN│  UP │ RGHT│
- * │ MB4 │     │     │     │     │ │     │     │     │     │     │
+ * │     │ LCLK│ MCLK│ RCLK│ MB5 │ │ PSC │ HOME│ PGDN│ PGUP│ END │
+ * │ SFT │ ALT │ CTL │ WIN │ MB4 │ │ INS │WIN/L│CTL/D│ALT/U│SFT/R│
+ * │     │     │     │     │     │ │     │     │     │     │     │
  * └──────────┐      │     │     │ │     │     │     │┌──────────┘
  *            └──────────────────┘ └──────────────────┘
  *
  * LAYER 4: OTH
- * ┌─────────────────────────────┐ ┌─────────────────────────────┐
- * │ BT0 │ BT1 │ BT2 │ BT3 │ BT4 │ │     │     │     │     │     │
- * │ BR+ │ MUTE│ VOL-│ VOL+│ BTCL│ │     │     │     │     │     │
- * │ BR- │ PREV│ PLAY│ NEXT│ BTCA│ │     │     │     │     │     │
- * └──────────┐      │     │     │ │     │     │     │┌──────────┘
- *            └──────────────────┘ └──────────────────┘
+ * ┌────────────────────────────────┐ ┌─────────────────────────────┐
+ * │ BT0  │ BT1 │  BT2 │  BT3 │ BT4 │ │     │     │     │     │     │
+ * │SFT/B+│ALT/M│CTL/V-│WIN/V+│ BTCL│ │     │ WIN │ CTL │ ALT │ SFT │
+ * │  BR- │ PREV │ PLAY│ NEXT │ BTCA│ │     │     │     │     │     │
+ * └─────────────┐     │      │     │ │     │     │     │┌──────────┘
+ *               └──────────────────┘ └──────────────────┘
  */
 
 #include <behaviors.dtsi>
@@ -83,46 +83,46 @@
 
         default_layer {
             bindings = <
-&none  &kp B             &kp L           &kp D        &kp C           &kp V        &kp J    &kp Y            &kp O         &kp U            &kp COMMA          &none
-&none  &mt LEFT_SHIFT N  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_WIN S  &kp G        &kp P    &mt RIGHT_WIN H  &mt RCTRL A   &mt LEFT_ALT E   &mt RIGHT_SHIFT I  &none
-&none  &kp X             &kp Q           &kp M        &kp W           &kp Z        &kp K    &kp F            &kp SQT       &kp SEMICOLON    &kp PERIOD         &none
+&none  &kp B             &kp L           &kp D        &kp C           &kp V        &kp J    &kp Y            &kp O         &kp U           &kp COMMA          &none
+&none  &mt LEFT_SHIFT N  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_WIN S  &kp G        &kp P    &mt RIGHT_WIN H  &mt RCTRL A   &mt LEFT_ALT E  &mt RIGHT_SHIFT I  &none
+&none  &kp X             &kp Q           &kp M        &kp W           &kp Z        &kp K    &kp F            &kp SQT       &kp SEMICOLON   &kp PERIOD         &none
                                          &lt 3 TAB    &lt 2 ESCAPE    &kp SPACE    &kp RET  &lt 1 BACKSPACE  &lt 4 DELETE
             >;
         };
 
         num {
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4          &kp F5        &kp F6        &kp F7        &kp F8        &kp F9         &kp F10       &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0  &trans
-&trans  &kp F11       &kp F12       &kp F13       &kp F14         &kp F15       &kp F16       &kp F17       &kp F18       &kp F19        &kp F20       &trans
-                                    &trans        &trans          &trans        &trans        &trans        &trans
+&trans  &kp F1         &kp F2       &kp F3        &kp F4       &kp F5     &kp F6   &kp F7       &kp F8        &kp F9       &kp F10        &trans
+&trans  &mt LSHIFT N1  &mt LALT N2  &mt LCTRL N3  &mt LWIN N4  &kp N5     &kp N6   &mt RWIN N7  &mt RCTRL N8  &mt RALT N9  &mt RSHIFT N0  &trans
+&trans  &kp F11        &kp F12      &kp F13       &kp F14      &kp F15    &kp F16  &kp F17      &kp F18       &kp F19      &kp F20        &trans
+                                    &trans        &trans       &trans     &trans   &trans       &trans
             >;
         };
 
         sym {
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR     &kp PERCENT       &kp CARET        &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp UNDERSCORE   &kp MINUS    &kp PLUS   &kp SLASH      &kp EQUAL         &kp PIPE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
-&trans  &kp UC_SECT      &kp GRAVE    &kp TILDE  &kp BACKSLASH  &kp UC_DEG        &kp UC_EURO      &kp UC_SS         &kp UC_AE          &kp UC_OE             &kp UC_UE              &trans
-                                      &trans     &trans         &trans            &kp RIGHT_SHIFT  &trans            &trans
+&trans  &kp EXCL          &kp AT          &kp HASH        &kp DLLR        &kp PRCNT     &kp CARET    &kp AMPS       &kp ASTRK       &kp LPAR       &kp RPAR         &trans
+&trans  &mt LSHIFT QMARK  &mt LALT MINUS  &mt LCTRL PLUS  &mt LWIN SLASH  &kp EQUAL     &kp PIPE     &mt RWIN LBKT  &mt RCTRL RBKT  &mt RALT LBRC  &mt RSHIFT RBRC  &trans
+&trans  &kp GRAVE         &kp UNDER       &kp TILDE       &kp BSLH        &kp UC_DEG    &kp UC_EURO  &kp UC_SS      &kp UC_AE       &kp UC_OE      &kp UC_UE        &trans
+                                          &trans          &trans          &trans        &trans       &trans         &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans    &trans     &trans     &trans     &trans    &kp PRINTSCREEN  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-&trans  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &kp INSERT       &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &mkp MB4  &trans     &trans     &trans     &trans    &trans           &trans          &trans         &trans        &trans     &trans
-                             &trans     &trans     &trans    &trans           &trans          &trans
+&trans  &trans          &mkp LCLK     &mkp MCLK  &mkp RCLK     &mkp MB5    &kp PRINTSCREEN  &kp HOME       &kp PAGE_DOWN   &kp PAGE_UP  &kp END           &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_WIN  &mkp MB4    &kp INSERT       &mt RWIN LEFT  &mt RCTRL DOWN  &mt RALT UP  &mt RSHIFT RIGHT  &trans
+&trans  &trans          &trans        &trans     &trans        &trans      &trans           &trans         &trans          &trans       &trans            &trans
+                                      &trans     &trans        &trans      &trans           &trans         &trans
             >;
         };
 
         oth {
             bindings = <
-&trans  &bt BT_SEL 0          &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp C_BRIGHTNESS_INC  &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &bt BT_CLR        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp C_BRIGHTNESS_DEC  &kp C_PREV    &kp C_PLAY_PAUSE   &kp C_NEXT       &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &trans
-                                            &trans             &trans           &trans            &trans  &trans  &trans
+&trans  &bt BT_SEL 0         &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3       &bt BT_SEL 4      &trans  &trans    &trans     &trans    &trans      &trans
+&trans  &mt LSHIFT C_BRI_UP  &mt LALT K_MUTE  &mt LCTRL C_VOL_DN  &mt LWIN C_VOL_UP  &bt BT_CLR        &trans  &kp RWIN  &kp RCTRL  &kp RALT  &kp RSHIFT  &trans
+&trans  &kp C_BRI_DN         &kp C_PREV       &kp C_PP            &kp C_NEXT         &bt BT_CLR_ALL    &trans  &trans    &trans     &trans    &trans      &trans
+                                              &trans              &trans             &trans            &trans  &trans    &trans
             >;
         };
     };
