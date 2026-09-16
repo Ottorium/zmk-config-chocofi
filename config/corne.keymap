@@ -83,9 +83,9 @@
 
         default_layer {
             bindings = <
-&none  &kp B             &kp L           &kp D        &kp C           &kp V        &kp J    &kp Y            &kp O         &kp U           &kp COMMA          &none
-&none  &mt LEFT_SHIFT N  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_WIN S  &kp G        &kp P    &mt RIGHT_WIN H  &mt RCTRL A   &mt LEFT_ALT E  &mt RIGHT_SHIFT I  &none
-&none  &kp X             &kp Q           &kp M        &kp W           &kp Z        &kp K    &kp F            &kp SQT       &kp SEMICOLON   &kp PERIOD         &none
+&none  &kp B             &kp L           &kp D        &kp C           &kp V        &kp J    &kp Y           &kp O         &kp U           &kp COMMA         &none
+&none  &mt LEFT_SHIFT N  &mt LEFT_ALT R  &mt LCTRL T  &mt LEFT_WIN S  &kp G        &kp P    &mt LEFT_WIN H  &mt LCTRL A   &mt LEFT_ALT E  &mt LEFT_SHIFT I  &none
+&none  &kp X             &kp Q           &kp M        &kp W           &kp Z        &kp K    &kp F           &kp SQT       &kp SEMICOLON   &kp PERIOD        &none
                                          &lt 3 TAB    &lt 2 ESCAPE    &kp SPACE    &kp RET  &lt 1 BACKSPACE  &lt 4 DELETE
             >;
         };
@@ -110,10 +110,10 @@
 
         nav {
             bindings = <
-&trans  &trans          &mkp LCLK     &mkp MCLK  &mkp RCLK     &mkp MB5    &kp PRINTSCREEN  &kp HOME       &kp PAGE_DOWN   &kp PAGE_UP  &kp END           &trans
-&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_WIN  &mkp MB4    &kp INSERT       &mt RWIN LEFT  &mt RCTRL DOWN  &mt RALT UP  &mt RSHIFT RIGHT  &trans
-&trans  &trans          &trans        &trans     &trans        &trans      &trans           &trans         &trans          &trans       &trans            &trans
-                                      &trans     &trans        &trans      &trans           &trans         &trans
+&trans  &trans          &mkp LCLK     &mkp MCLK  &mkp RCLK     &mkp MB5    &kp PRINTSCREEN  &kp HOME           &kp PAGE_DOWN    &kp PAGE_UP     &kp END               &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_WIN  &mkp MB4    &kp INSERT       &mt LEFT_WIN LEFT  &mt LCTRL DOWN   &mt LEFT_ALT UP  &mt LEFT_SHIFT RIGHT  &trans
+&trans  &trans          &trans        &trans     &trans        &trans      &trans           &trans             &trans           &trans           &trans                &trans
+                                      &trans     &trans        &trans      &trans           &trans             &trans
             >;
         };
 
